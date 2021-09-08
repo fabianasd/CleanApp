@@ -13,6 +13,7 @@
 		FA2DC9B426E7DE5000FC39B4 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC9B326E7DE5000FC39B4 /* RemoteAddAccountTests.swift */; };
 		FA2DC9BE26E7DEC300FC39B4 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2DC99526E79FE700FC39B4 /* Domain.framework */; };
 		FA2DC9BF26E7DEC300FC39B4 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2DC99526E79FE700FC39B4 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA2DC9C426E841A900FC39B4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC9C326E841A900FC39B4 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		FA2DC9AE26E7DE5000FC39B4 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2DC9B326E7DE5000FC39B4 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
 		FA2DC9B526E7DE5000FC39B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA2DC9C326E841A900FC39B4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +111,10 @@
 		FA2DC99626E79FE700FC39B4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				FA2DC99826E79FE700FC39B4 /* Info.plist */,
 				FA2DC99D26E7ACBD00FC39B4 /* AddAccount.swift */,
 				FA2DC99F26E7DC8A00FC39B4 /* AccountModel.swift */,
+				FA2DC9C326E841A900FC39B4 /* Model.swift */,
+				FA2DC99826E79FE700FC39B4 /* Info.plist */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2DC9C426E841A900FC39B4 /* Model.swift in Sources */,
 				FA2DC99E26E7ACBD00FC39B4 /* AddAccount.swift in Sources */,
 				FA2DC9A026E7DC8A00FC39B4 /* AccountModel.swift in Sources */,
 			);
