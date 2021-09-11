@@ -7,7 +7,7 @@
 
 import Foundation
 
-//vai receber alguns dados do cadastro, e no final retorna uma conta criada
+//vai receber alguns dados do cadastro, e completa com o resulado da conta criada ou erro
 public protocol AddAccount {
     func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, Error>) -> Void)
 }
