@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FA1CE73426EDA039006D8FC8 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE73326EDA039006D8FC8 /* ExtensionHelpers.swift */; };
+		FA1CE73726EEA322006D8FC8 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE73626EEA322006D8FC8 /* TestExtensions.swift */; };
+		FA1CE73926EEA3D9006D8FC8 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE73826EEA3D9006D8FC8 /* TestFactories.swift */; };
+		FA1CE73C26EEA46F006D8FC8 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE73B26EEA46F006D8FC8 /* HttpClientSpy.swift */; };
+		FA1CE73E26EEA711006D8FC8 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE73D26EEA711006D8FC8 /* AccountModelFactory.swift */; };
 		FA2DC99E26E7ACBD00FC39B4 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC99D26E7ACBD00FC39B4 /* AddAccount.swift */; };
 		FA2DC9A026E7DC8A00FC39B4 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC99F26E7DC8A00FC39B4 /* AccountModel.swift */; };
 		FA2DC9AF26E7DE5000FC39B4 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2DC9A626E7DE5000FC39B4 /* Data.framework */; };
@@ -54,6 +58,10 @@
 
 /* Begin PBXFileReference section */
 		FA1CE73326EDA039006D8FC8 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
+		FA1CE73626EEA322006D8FC8 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		FA1CE73826EEA3D9006D8FC8 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
+		FA1CE73B26EEA46F006D8FC8 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
+		FA1CE73D26EEA711006D8FC8 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 		FA2DC99526E79FE700FC39B4 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2DC99826E79FE700FC39B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2DC99D26E7ACBD00FC39B4 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -105,6 +113,24 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		FA1CE73526EEA2F0006D8FC8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA1CE73626EEA322006D8FC8 /* TestExtensions.swift */,
+				FA1CE73826EEA3D9006D8FC8 /* TestFactories.swift */,
+				FA1CE73D26EEA711006D8FC8 /* AccountModelFactory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA1CE73A26EEA437006D8FC8 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				FA1CE73B26EEA46F006D8FC8 /* HttpClientSpy.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
 		FA2DC97B26E79DF300FC39B4 = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +177,9 @@
 		FA2DC9B226E7DE5000FC39B4 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA1CE73526EEA2F0006D8FC8 /* Helpers */,
 				FA2DC9CD26E844C500FC39B4 /* UseCases */,
+				FA1CE73A26EEA437006D8FC8 /* Http */,
 				FA2DC9B526E7DE5000FC39B4 /* Info.plist */,
 			);
 			path = DataTests;
@@ -383,7 +411,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1CE73926EEA3D9006D8FC8 /* TestFactories.swift in Sources */,
+				FA1CE73C26EEA46F006D8FC8 /* HttpClientSpy.swift in Sources */,
 				FA2DC9B426E7DE5000FC39B4 /* RemoteAddAccountTests.swift in Sources */,
+				FA1CE73E26EEA711006D8FC8 /* AccountModelFactory.swift in Sources */,
+				FA1CE73726EEA322006D8FC8 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
