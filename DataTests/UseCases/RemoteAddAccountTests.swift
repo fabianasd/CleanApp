@@ -26,45 +26,25 @@ class RemoteAddAccountTests: XCTestCase {
     
     func test_add_should_complet_with_error_if_client_completes_with_error() {
         let (sut, httpClientSpy) = makeSut()
-        let exp = expectation(description: "waiting") // a execução é assincrona, com essa config. ele acessa e executa o XTCAssertEqual
-        sut.add(addAccountModel: makeAddAccountModel()) { result in
-            switch result {
-            case .failure(let error): XCTAssertEqual(error, .unexpected)
-            case .success: XCTFail("Expected error receive \(result) instead")
-            }
-            exp.fulfill() //config
-        }
-        httpClientSpy.completionWithError(.noConnectivity)
-        wait(for: [exp], timeout: 1) //config
+        expect(sut, completionWith: .failure(.unexpected), when: { //espero que o sut complete com um erro do tipo .unexpected quando...
+            httpClientSpy.completionWithError(.noConnectivity) //... o postClient completar com um erro
+        })
     }
     
     func test_add_should_complet_with_account_if_client_completes_with_valid_data() {
         let (sut, httpClientSpy) = makeSut()
-        let exp = expectation(description: "waiting")
-        let expectedAccount = makeAccountModel()
-        sut.add(addAccountModel: makeAddAccountModel()) { result in
-            switch result {
-            case .failure: XCTFail("Expected error receive \(result) instead")
-            case .success(let receivedAccount): XCTAssertEqual(receivedAccount, expectedAccount)
-            }
-            exp.fulfill() //config
-        }
-        httpClientSpy.completionWithData(expectedAccount.toData()!)
-        wait(for: [exp], timeout: 1)
+        let account = makeAccountModel()
+        expect(sut, completionWith: .success(account), when: { //espero que o sut complete com um success do tipo account quando...
+            httpClientSpy.completionWithData(account.toData()!) //... o postClient completar com um toData do tipo account validos
+        })
     }
     
     func test_add_should_complet_with_error_if_client_completes_with_invalid_data() {
         let (sut, httpClientSpy) = makeSut()
-        let exp = expectation(description: "waiting")
-        sut.add(addAccountModel: makeAddAccountModel()) { result in
-            switch result {
-            case .failure(let error): XCTAssertEqual(error, .unexpected)
-            case .success: XCTFail("Expected error receive \(result) instead")
-            }
-            exp.fulfill()
-        }
-        httpClientSpy.completionWithData(Data("invalid_data".utf8))
-        wait(for: [exp], timeout: 1)
+        
+        expect(sut, completionWith: .failure(.unexpected), when: { //espero que o sut complete com um erro do tipo .unexpected quando...
+            httpClientSpy.completionWithData(Data("invalid_data".utf8)) //completar com dados invalidos
+        })
     }
 }
 
@@ -74,6 +54,21 @@ extension RemoteAddAccountTests {
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
         return (sut, httpClientSpy)
+    }
+    
+    func expect(_ sut: RemoteAddAccount, completionWith expectedResult: Result<AccountModel, DomainError>, when action: () -> Void) {
+        let exp = expectation(description: "waiting") // a execução é assincrona, com essa config. ele acessa e executa o XTCAssertEqual
+        sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
+            switch (expectedResult, receivedResult) {
+            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError)
+            case (.success(let expectedAccount), .success(let receivedAccount)): XCTAssertEqual(expectedAccount, receivedAccount)
+                
+            default: XCTFail("Expected \(expectedResult) received \(receivedResult) instead")
+            }
+            exp.fulfill() //config
+        }
+        action()
+        wait(for: [exp], timeout: 1) //config
     }
     
     func makeAddAccountModel() -> AddAccountModel {
