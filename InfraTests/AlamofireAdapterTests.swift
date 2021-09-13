@@ -15,7 +15,7 @@ class AlamofireAdapter {
         self.session = session
     }
     func post(to url: URL, with data: Data?) {
-        let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
+        let json = data == nil ? nil : try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
         session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
     }
 }
@@ -33,6 +33,21 @@ class AlamofireAdapterTests: XCTestCase {
             XCTAssertEqual(url, request.url) // valida se esse url é mesma informada fora
             XCTAssertEqual("POST", request.httpMethod) // valida o metodo
             XCTAssertNotNil(request.httpBodyStream)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+    }
+    
+    func test_post_should_make_request_with_request_with_no_data() {
+        let url = makeUrl()
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [UrlProtocolStub.self]
+        let session = Session(configuration: configuration)
+        let sut = AlamofireAdapter(session: session) //quando executa uma requisição com esse session que foi passado no Almofire, vai cair no UrlProtocolStub
+        sut.post(to: url, with: nil)
+        let exp = expectation(description: "waiting")
+        UrlProtocolStub.ObserverRequest { request in // o observerRequest esta observando o UrlProtocolStub e quando estiver pronto vai me retornar um request
+            XCTAssertNil(request.httpBodyStream)
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1)
