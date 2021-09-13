@@ -6,11 +6,56 @@
 //
 
 import XCTest
-@testable import Infra
+import Alamofire
+
+class AlamofireAdapter {
+    private let session: Session
+    
+    init(session: Session = .default) {
+        self.session = session
+    }
+    func post(to url: URL) {
+        session.request(url).resume()
+    }
+}
 
 class AlamofireAdapterTests: XCTestCase {
     func test_() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let url = makeUrl()
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [UrlProtocolStub.self]
+        let session = Session(configuration: configuration)
+        let sut = AlamofireAdapter(session: session) //quando executa uma requisição com esse session que foi passado no Almofire, vai cair no UrlProtocolStub
+        sut.post(to: url)
+        let exp = expectation(description: "waiting")
+        UrlProtocolStub.ObserverRequest { request in // o observerRequest esta observando o UrlProtocolStub e quando estiver pronto vai me retornar um request
+            XCTAssertEqual(url, request.url) // valida se esse url é mesma informada fora
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+    }
+}
+
+//generico para qualquer ferramenta que for usada para fazer request (por exemplo a UrlSession)
+class UrlProtocolStub: URLProtocol {
+    static var emit: ((URLRequest) -> Void)?
+    static func ObserverRequest(completion: @escaping (URLRequest) -> Void) {
+        UrlProtocolStub.emit = completion
+    }
+    // usou override pois esta reescrevendo classe e sobreescrevendo os metodos dela
+    override open class func canInit(with request: URLRequest) -> Bool {
+        return true
+    }
+    
+    override open class func canonicalRequest(for request: URLRequest) -> URLRequest {
+        return request
+    }
+    
+    override open func startLoading() {
+        UrlProtocolStub.emit?(request)
+    }
+    
+    override open func stopLoading() {
+        
     }
 }
