@@ -29,6 +29,7 @@
 		FA1CE79C26F10D70006D8FC8 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2DC99526E79FE700FC39B4 /* Domain.framework */; };
 		FA1CE79D26F10D70006D8FC8 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2DC99526E79FE700FC39B4 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA1CE7A226F10DEF006D8FC8 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE7A126F10DEF006D8FC8 /* AlertView.swift */; };
+		FA1CE7A826F1141E006D8FC8 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE7A726F1141E006D8FC8 /* EmailValidator.swift */; };
 		FA2DC99E26E7ACBD00FC39B4 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC99D26E7ACBD00FC39B4 /* AddAccount.swift */; };
 		FA2DC9A026E7DC8A00FC39B4 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC99F26E7DC8A00FC39B4 /* AccountModel.swift */; };
 		FA2DC9AF26E7DE5000FC39B4 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2DC9A626E7DE5000FC39B4 /* Data.framework */; };
@@ -167,6 +168,7 @@
 		FA1CE79226F0E8FE006D8FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1CE79A26F10D21006D8FC8 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		FA1CE7A126F10DEF006D8FC8 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		FA1CE7A726F1141E006D8FC8 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		FA2DC99526E79FE700FC39B4 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2DC99826E79FE700FC39B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2DC99D26E7ACBD00FC39B4 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 		FA1CE78426F0E8FD006D8FC8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FA1CE7A626F11409006D8FC8 /* Validators */,
 				FA1CE7A426F10E3F006D8FC8 /* Presenters */,
 				FA1CE78626F0E8FD006D8FC8 /* Info.plist */,
 				FA1CE7A326F10DF7006D8FC8 /* Views */,
@@ -362,6 +365,14 @@
 				FA1CE79026F0E8FE006D8FC8 /* SignUpPresenterTests.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		FA1CE7A626F11409006D8FC8 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				FA1CE7A726F1141E006D8FC8 /* EmailValidator.swift */,
+			);
+			name = Validators;
 			sourceTree = "<group>";
 		};
 		FA2DC97B26E79DF300FC39B4 = {
@@ -834,6 +845,7 @@
 			files = (
 				FA1CE79B26F10D21006D8FC8 /* SignUpPresenter.swift in Sources */,
 				FA1CE7A226F10DEF006D8FC8 /* AlertView.swift in Sources */,
+				FA1CE7A826F1141E006D8FC8 /* EmailValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
