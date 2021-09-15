@@ -6,24 +6,30 @@
 //
 
 import Foundation
+import Domain
 
 //O presenter vai comunicar com controller através do protocol
 //a ideia do presenter é tirar as responsabilidades do controlador e assim o controlador vai simplesmente trabalhar com viewModel
 public final class SignUpPresenter {
     private let alertView: AlertView
     private let emailValidator: EmailValidator
+    private let addAccount: AddAccount
     
-    public init(alertView: AlertView, emailValidator: EmailValidator) {
+    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount) {
         self.alertView = alertView
         self.emailValidator = emailValidator
+        self.addAccount = addAccount
     }
     
     public func signUp(viewModel: SignUpViewModel) {
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
+        } else {
+            let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
+            addAccount.add(addAccountModel: addAccountModel) { _ in }
         }
     }
-    
+        
     private func validate(viewModel: SignUpViewModel) -> String? {
         if viewModel.name == nil || viewModel.name!.isEmpty {
             return "O campo Nome é obrigatório"
