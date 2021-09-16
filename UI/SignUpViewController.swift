@@ -5,6 +5,7 @@
 //  Created by Macbook on 16/09/21.
 //
 
+import Foundation
 import UIKit
 import Presentation
 
@@ -24,5 +25,10 @@ extension SignUpViewController: LoadingView {
         } else {
             loadingIndicator?.stopAnimating()
         }
+    }
+}
+
+extension SignUpViewController: AlertView {
+    func showMessage(viewModel: AlertViewModel) {
     }
 }
