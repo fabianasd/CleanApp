@@ -32,8 +32,9 @@
 		FA1CE7A926F17C31006D8FC8 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE73D26EEA711006D8FC8 /* AccountModelFactory.swift */; };
 		FA1CE7AA26F26B1D006D8FC8 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE73626EEA322006D8FC8 /* TestExtensions.swift */; };
 		FA1CE7AC26F2CF80006D8FC8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE7AB26F2CF80006D8FC8 /* LoadingView.swift */; };
-		FA1CE7B026F2DF87006D8FC8 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE7AF26F2DF87006D8FC8 /* SignUpViewModel.swift */; };
-		FA1CE7B126F2DFDF006D8FC8 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE79A26F10D21006D8FC8 /* SignUpPresenter.swift */; };
+		FA1CE7B326F2E0EC006D8FC8 /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE7B226F2E0EC006D8FC8 /* SignUpMapper.swift */; };
+		FA1CE7B426F2E19B006D8FC8 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE7AF26F2DF87006D8FC8 /* SignUpViewModel.swift */; };
+		FA1CE7B526F2E1A8006D8FC8 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE79A26F10D21006D8FC8 /* SignUpPresenter.swift */; };
 		FA2DC99E26E7ACBD00FC39B4 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC99D26E7ACBD00FC39B4 /* AddAccount.swift */; };
 		FA2DC9A026E7DC8A00FC39B4 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC99F26E7DC8A00FC39B4 /* AccountModel.swift */; };
 		FA2DC9AF26E7DE5000FC39B4 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2DC9A626E7DE5000FC39B4 /* Data.framework */; };
@@ -175,6 +176,7 @@
 		FA1CE7A726F1141E006D8FC8 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		FA1CE7AB26F2CF80006D8FC8 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FA1CE7AF26F2DF87006D8FC8 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		FA1CE7B226F2E0EC006D8FC8 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
 		FA2DC99526E79FE700FC39B4 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2DC99826E79FE700FC39B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2DC99D26E7ACBD00FC39B4 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 			children = (
 				FA1CE79A26F10D21006D8FC8 /* SignUpPresenter.swift */,
 				FA1CE7AF26F2DF87006D8FC8 /* SignUpViewModel.swift */,
+				FA1CE7B226F2E0EC006D8FC8 /* SignUpMapper.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -859,7 +862,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1CE7B526F2E1A8006D8FC8 /* SignUpPresenter.swift in Sources */,
+				FA1CE7B326F2E0EC006D8FC8 /* SignUpMapper.swift in Sources */,
 				FA1CE7AC26F2CF80006D8FC8 /* LoadingView.swift in Sources */,
+				FA1CE7B426F2E19B006D8FC8 /* SignUpViewModel.swift in Sources */,
 				FA1CE7A226F10DEF006D8FC8 /* AlertView.swift in Sources */,
 				FA1CE7A826F1141E006D8FC8 /* EmailValidator.swift in Sources */,
 			);
@@ -871,8 +877,6 @@
 			files = (
 				FA1CE7A926F17C31006D8FC8 /* AccountModelFactory.swift in Sources */,
 				FA1CE7AA26F26B1D006D8FC8 /* TestExtensions.swift in Sources */,
-				FA1CE7B026F2DF87006D8FC8 /* SignUpViewModel.swift in Sources */,
-				FA1CE7B126F2DFDF006D8FC8 /* SignUpPresenter.swift in Sources */,
 				FA1CE79126F0E8FE006D8FC8 /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
