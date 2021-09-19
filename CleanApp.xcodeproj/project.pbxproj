@@ -70,7 +70,6 @@
 		FA1CE86226F4FC61006D8FC8 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA1CE7CA26F35DFD006D8FC8 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA1CE86526F4FC61006D8FC8 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1CE7FF26F4AF96006D8FC8 /* Validation.framework */; };
 		FA1CE86626F4FC61006D8FC8 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA1CE7FF26F4AF96006D8FC8 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA1CE86C26F4FDD0006D8FC8 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE86B26F4FDD0006D8FC8 /* ControllerFactory.swift */; };
 		FA1CE86F26F51257006D8FC8 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE86E26F51257006D8FC8 /* UseCaseFactory.swift */; };
 		FA1CE87226F513ED006D8FC8 /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE87126F513ED006D8FC8 /* SignUpComposer.swift */; };
 		FA1CE87426F6D404006D8FC8 /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE87326F6D404006D8FC8 /* SignUpIntegrationTests.swift */; };
@@ -363,7 +362,6 @@
 		FA1CE83126F4E631006D8FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1CE83626F4E631006D8FC8 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1CE83C26F4E631006D8FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA1CE86B26F4FDD0006D8FC8 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		FA1CE86E26F51257006D8FC8 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		FA1CE87126F513ED006D8FC8 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		FA1CE87326F6D404006D8FC8 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
@@ -797,7 +795,6 @@
 		FA1CE86A26F4FDB0006D8FC8 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				FA1CE86B26F4FDD0006D8FC8 /* ControllerFactory.swift */,
 				FA1CE86E26F51257006D8FC8 /* UseCaseFactory.swift */,
 			);
 			path = Factories;
@@ -1569,7 +1566,6 @@
 			files = (
 				FA1CE86F26F51257006D8FC8 /* UseCaseFactory.swift in Sources */,
 				FA1CE82426F4E62D006D8FC8 /* AppDelegate.swift in Sources */,
-				FA1CE86C26F4FDD0006D8FC8 /* ControllerFactory.swift in Sources */,
 				FA1CE82626F4E62D006D8FC8 /* SceneDelegate.swift in Sources */,
 				FA1CE87926F6DA4A006D8FC8 /* WeakVarProxy.swift in Sources */,
 				FA1CE87226F513ED006D8FC8 /* SignUpComposer.swift in Sources */,
