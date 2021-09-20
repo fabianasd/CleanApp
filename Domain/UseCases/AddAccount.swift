@@ -9,7 +9,8 @@ import Foundation
 
 //vai receber alguns dados do cadastro, e completa com o resulado da conta criada ou erro
 public protocol AddAccount {
-    func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void)
+    typealias Result = Swift.Result<AccountModel, DomainError>
+    func add(addAccountModel: AddAccountModel, completion: @escaping (Result) -> Void)
 }
 
 public struct AddAccountModel: Model {

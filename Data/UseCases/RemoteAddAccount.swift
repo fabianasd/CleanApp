@@ -17,7 +17,7 @@ public final class RemoteAddAccount: AddAccount {
         self.httpClient = httpClient
     }
     
-    public func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+    public func add(addAccountModel: AddAccountModel, completion: @escaping (AddAccount.Result) -> Void) {
         httpClient.post(to: url, with: addAccountModel.toData()) { [weak self] result in
             // var x = self?.url //exemplo de teste de memory lyric
             guard self != nil else { return } // se a execucao for diferente de nil, executa o switch, senao nao executa
