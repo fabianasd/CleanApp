@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Presentation
+import Validation
 
 //adapter, adapta o protocolo "isValid", a forma que o swift faz: linhas 18, 19 e 20
 public final class EmailValidatorAdapter: EmailValidator {
