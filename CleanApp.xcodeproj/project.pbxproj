@@ -112,6 +112,7 @@
 		FABD0CBE26F9456200C2B46A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CBD26F9456200C2B46A /* Color.swift */; };
 		FABD0CC126F9476400C2B46A /* RoundendTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CC026F9476400C2B46A /* RoundendTextField.swift */; };
 		FABD0CC326F948A900C2B46A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CC226F948A900C2B46A /* NavigationController.swift */; };
+		FABD0CC526F953FD00C2B46A /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CC426F953FD00C2B46A /* Authentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -435,6 +436,7 @@
 		FABD0CBD26F9456200C2B46A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FABD0CC026F9476400C2B46A /* RoundendTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundendTextField.swift; sourceTree = "<group>"; };
 		FABD0CC226F948A900C2B46A /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		FABD0CC426F953FD00C2B46A /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1042,6 +1044,7 @@
 			isa = PBXGroup;
 			children = (
 				FA2DC99D26E7ACBD00FC39B4 /* AddAccount.swift */,
+				FABD0CC426F953FD00C2B46A /* Authentication.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1795,6 +1798,7 @@
 				FA2DC9C426E841A900FC39B4 /* Model.swift in Sources */,
 				FA2DC99E26E7ACBD00FC39B4 /* AddAccount.swift in Sources */,
 				FA2DC9D026EBC8B700FC39B4 /* DomainError.swift in Sources */,
+				FABD0CC526F953FD00C2B46A /* Authentication.swift in Sources */,
 				FA2DC9A026E7DC8A00FC39B4 /* AccountModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
