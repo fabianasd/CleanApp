@@ -107,6 +107,11 @@
 		FABD0CB026F9113B00C2B46A /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CAF26F9113B00C2B46A /* ApiUrlFactory.swift */; };
 		FABD0CB326F912A300C2B46A /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CB226F912A300C2B46A /* AlamofireAdapterFactory.swift */; };
 		FABD0CB726F9147D00C2B46A /* EmailValidatorAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CB626F9147D00C2B46A /* EmailValidatorAdapterFactory.swift */; };
+		FABD0CBA26F93DC400C2B46A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABD0CB926F93DC400C2B46A /* Images.xcassets */; };
+		FABD0CBC26F9446B00C2B46A /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CBB26F9446B00C2B46A /* UIColorExtensions.swift */; };
+		FABD0CBE26F9456200C2B46A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CBD26F9456200C2B46A /* Color.swift */; };
+		FABD0CC126F9476400C2B46A /* RoundendTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CC026F9476400C2B46A /* RoundendTextField.swift */; };
+		FABD0CC326F948A900C2B46A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CC226F948A900C2B46A /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -425,6 +430,11 @@
 		FABD0CAF26F9113B00C2B46A /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		FABD0CB226F912A300C2B46A /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		FABD0CB626F9147D00C2B46A /* EmailValidatorAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterFactory.swift; sourceTree = "<group>"; };
+		FABD0CB926F93DC400C2B46A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FABD0CBB26F9446B00C2B46A /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		FABD0CBD26F9456200C2B46A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FABD0CC026F9476400C2B46A /* RoundendTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundendTextField.swift; sourceTree = "<group>"; };
+		FABD0CC226F948A900C2B46A /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -730,6 +740,8 @@
 		FA1CE7CB26F35DFD006D8FC8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FABD0CBF26F9473C00C2B46A /* Components */,
+				FABD0CB826F93DAA00C2B46A /* Resources */,
 				FA1CE7F326F42A81006D8FC8 /* Helpers */,
 				FA1CE7EE26F3BAD1006D8FC8 /* Scenes */,
 				FA1CE7CD26F35DFD006D8FC8 /* Info.plist */,
@@ -792,7 +804,9 @@
 			isa = PBXGroup;
 			children = (
 				FA1CE7F426F42AA7006D8FC8 /* UIViewControllerExtensions.swift */,
+				FABD0CBB26F9446B00C2B46A /* UIColorExtensions.swift */,
 				FA1CE7F826F42DB8006D8FC8 /* Storyboard.swift */,
+				FABD0CBD26F9456200C2B46A /* Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1098,6 +1112,23 @@
 				FA1CE87126F513ED006D8FC8 /* SignUpControllerFactory.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FABD0CB826F93DAA00C2B46A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FABD0CB926F93DC400C2B46A /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FABD0CBF26F9473C00C2B46A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FABD0CC026F9476400C2B46A /* RoundendTextField.swift */,
+				FABD0CC226F948A900C2B46A /* NavigationController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1558,6 +1589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1CE7EB26F379DA006D8FC8 /* SignUp.storyboard in Resources */,
+				FABD0CBA26F93DC400C2B46A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1682,9 +1714,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABD0CC126F9476400C2B46A /* RoundendTextField.swift in Sources */,
 				FA1CE7F526F42AA7006D8FC8 /* UIViewControllerExtensions.swift in Sources */,
 				FA1CE7F926F42DB8006D8FC8 /* Storyboard.swift in Sources */,
 				FA1CE7E726F3792E006D8FC8 /* SignUpViewController.swift in Sources */,
+				FABD0CBE26F9456200C2B46A /* Color.swift in Sources */,
+				FABD0CC326F948A900C2B46A /* NavigationController.swift in Sources */,
+				FABD0CBC26F9446B00C2B46A /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
