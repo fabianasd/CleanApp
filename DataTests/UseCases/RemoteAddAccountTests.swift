@@ -31,7 +31,14 @@ class RemoteAddAccountTests: XCTestCase {
         })
     }
     
-    func test_add_should_complet_with_account_if_client_completes_with_valid_data() {
+    func test_add_should_complete_with_email_in_use_error_if_client_completes_with_forbidden() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completionWith: .failure(.emailInUse), when: { //espero que o sut complete com um erro do tipo .unexpected quando...
+            httpClientSpy.completionWithError(.forbidden) //... o postClient completar com um erro
+        })
+    }
+    
+    func test_add_should_complete_with_account_if_client_completes_with_valid_data() {
         let (sut, httpClientSpy) = makeSut()
         let account = makeAccountModel()
         expect(sut, completionWith: .success(account), when: { //espero que o sut complete com um success do tipo account quando...
@@ -39,7 +46,7 @@ class RemoteAddAccountTests: XCTestCase {
         })
     }
     
-    func test_add_should_complet_with_error_if_client_completes_with_invalid_data() {
+    func test_add_should_complete_with_error_if_client_completes_with_invalid_data() {
         let (sut, httpClientSpy) = makeSut()
         expect(sut, completionWith: .failure(.unexpected), when: { //espero que o sut complete com um erro do tipo .unexpected quando...
             httpClientSpy.completionWithData(makeInvalidData()) //completar com dados invalidos
