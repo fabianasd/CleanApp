@@ -8,7 +8,8 @@
 import Foundation
 import Presentation
 
-public final class RequiredFieldValidation: Validation {
+public final class RequiredFieldValidation: Validation, Equatable {
+    
     private let fieldName: String
     private let fieldLabel: String
     
@@ -22,5 +23,9 @@ public final class RequiredFieldValidation: Validation {
             return "O campo \(fieldLabel) é obrigatório"
         }
         return nil
+    }
+  
+    public static func == (lhs: RequiredFieldValidation, rhs: RequiredFieldValidation) -> Bool {
+        return lhs.fieldLabel == rhs.fieldLabel && lhs.fieldName == rhs.fieldName
     }
 }
