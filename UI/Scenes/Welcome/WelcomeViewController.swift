@@ -13,7 +13,7 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var signButton: UIButton!
     
     public var login: (() -> Void)?
-    public var signUp: (( ) -> Void)?
+    public var signUp: (() -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
