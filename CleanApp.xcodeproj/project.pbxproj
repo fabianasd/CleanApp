@@ -115,6 +115,9 @@
 		FABD0CC526F953FD00C2B46A /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CC426F953FD00C2B46A /* Authentication.swift */; };
 		FABD0CC726F9549B00C2B46A /* RemoteAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CC626F9549B00C2B46A /* RemoteAuthenticationTests.swift */; };
 		FABD0CC926F955D100C2B46A /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CC826F955D100C2B46A /* RemoteAuthentication.swift */; };
+		FABD0CCC26F95E7F00C2B46A /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CCB26F95E7F00C2B46A /* LoginPresenterTests.swift */; };
+		FABD0CCF26F95F6500C2B46A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CCE26F95F6500C2B46A /* LoginViewModel.swift */; };
+		FABD0CD126F95FE400C2B46A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CD026F95FE400C2B46A /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -441,6 +444,9 @@
 		FABD0CC426F953FD00C2B46A /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		FABD0CC626F9549B00C2B46A /* RemoteAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationTests.swift; sourceTree = "<group>"; };
 		FABD0CC826F955D100C2B46A /* RemoteAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
+		FABD0CCB26F95E7F00C2B46A /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		FABD0CCE26F95F6500C2B46A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FABD0CD026F95FE400C2B46A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -650,6 +656,7 @@
 		FA1CE78F26F0E8FE006D8FC8 /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
+				FABD0CCA26F95E4200C2B46A /* Login */,
 				FA1CE7C226F35927006D8FC8 /* Helpers */,
 				FA1CE7BD26F3581A006D8FC8 /* UseCases */,
 				FA1CE7BA26F357CF006D8FC8 /* Validators */,
@@ -672,6 +679,7 @@
 		FA1CE7A426F10E3F006D8FC8 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				FABD0CCD26F95F4D00C2B46A /* Login */,
 				FA1CE7AE26F2DF51006D8FC8 /* SignUp */,
 			);
 			name = Presenters;
@@ -1138,6 +1146,23 @@
 				FABD0CC226F948A900C2B46A /* NavigationController.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		FABD0CCA26F95E4200C2B46A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FABD0CCB26F95E7F00C2B46A /* LoginPresenterTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FABD0CCD26F95F4D00C2B46A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FABD0CCE26F95F6500C2B46A /* LoginViewModel.swift */,
+				FABD0CD026F95FE400C2B46A /* LoginPresenter.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1698,6 +1723,8 @@
 			files = (
 				FA1CE7B526F2E1A8006D8FC8 /* SignUpPresenter.swift in Sources */,
 				FA1CE7AC26F2CF80006D8FC8 /* LoadingView.swift in Sources */,
+				FABD0CD126F95FE400C2B46A /* LoginPresenter.swift in Sources */,
+				FABD0CCF26F95F6500C2B46A /* LoginViewModel.swift in Sources */,
 				FA1CE7B426F2E19B006D8FC8 /* SignUpViewModel.swift in Sources */,
 				FA1CE7A226F10DEF006D8FC8 /* AlertView.swift in Sources */,
 				FA1CE88526F7E040006D8FC8 /* Validation.swift in Sources */,
@@ -1709,6 +1736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1CE7C126F358A0006D8FC8 /* LoadingViewSpy.swift in Sources */,
+				FABD0CCC26F95E7F00C2B46A /* LoginPresenterTests.swift in Sources */,
 				FA1CE7BF26F35830006D8FC8 /* AddAccountSpy.swift in Sources */,
 				FA1CE7B926F3577E006D8FC8 /* AlertViewSpy.swift in Sources */,
 				FA1CE7A926F17C31006D8FC8 /* AccountModelFactory.swift in Sources */,
