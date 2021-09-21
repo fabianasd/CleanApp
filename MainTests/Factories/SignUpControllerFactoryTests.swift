@@ -1,5 +1,5 @@
 //
-//  SignUpComposerTests.swift
+//  SignUpControllerFactoryTests.swift
 //  MainTests
 //
 //  Created by Macbook on 18/09/21.
@@ -10,7 +10,7 @@ import Main
 import UI
 import Validation
 
-class SignUpFactoryTests: XCTestCase {
+class SignUpControllerFactoryTests: XCTestCase {
     func test_background_request_should_complete_on_main_thread() {
         let (sut, addAccountSpy) = makeSut()
         sut.loadViewIfNeeded()
@@ -35,7 +35,7 @@ class SignUpFactoryTests: XCTestCase {
     }
 }
 
-extension SignUpFactoryTests {
+extension SignUpControllerFactoryTests {
     func makeSut(file: StaticString = #file, line: UInt = #line) -> (sut: SignUpViewController, addAccountSpy: AddAccountSpy) {
         let addAccountSpy = AddAccountSpy()
         let sut = makeSignUpController(addAccount: MainQueueDispatchDecorator(addAccountSpy))
