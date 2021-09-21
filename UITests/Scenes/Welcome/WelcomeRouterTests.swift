@@ -13,23 +13,35 @@ class WelcomeRouterTests: XCTestCase {
     public final class WelcomeRouter {
         private let nav: NavigationController
         private let loginFactory: () -> LoginViewController
+        private let signUpFactory: () -> SignUpViewController
         
-        public init(nav: NavigationController, loginFactory: @escaping () -> LoginViewController) {
+        public init(nav: NavigationController, loginFactory: @escaping () -> LoginViewController, signUpFactory: @escaping () -> SignUpViewController) {
             self.nav = nav
             self.loginFactory = loginFactory
+            self.signUpFactory = signUpFactory
         }
         
         public func gotoLogin() {
             nav.pushViewController(loginFactory())
         }
+        
+        public func gotoSign() {
+            nav.pushViewController(signUpFactory())
+        }
     }
     
     func test_gotoLogin_calls_nav_with_correct_vc() {
-        let loginFactorySpy = LoginFactorySpy()
         let (sut, nav) = makeSut()
         sut.gotoLogin()
         XCTAssertEqual(nav.viewControllers.count, 1)
         XCTAssertTrue(nav.viewControllers[0] is LoginViewController)
+    }
+    
+    func test_gotoSignUp_calls_nav_with_correct_vc() {
+        let (sut, nav) = makeSut()
+        sut.gotoSign()
+        XCTAssertEqual(nav.viewControllers.count, 1)
+        XCTAssertTrue(nav.viewControllers[0] is SignUpViewController)
     }
 }
 
