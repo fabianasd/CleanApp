@@ -12,7 +12,7 @@ import Validation
 import Domain
 
 public func makeLoginController() -> LoginViewController {
-  return makeLoginControllerWith(authentication: makeRemoteAuthentication()) //chamada default
+    return makeLoginControllerWith(authentication: makeRemoteAuthentication()) //chamada default
 }
 
 public func makeLoginControllerWith(authentication: Authentication) -> LoginViewController {
@@ -24,9 +24,6 @@ public func makeLoginControllerWith(authentication: Authentication) -> LoginView
 }
 
 public func makeLoginValidations() -> [Validation] {
-    return [
-        RequiredFieldValidation(fieldName: "email", fieldLabel: "Email"),
-        EmailValidation(fieldName: "email", fieldLabel: "Email", emailValidator: makeEmailValidatorAdapter()),
-        RequiredFieldValidation(fieldName: "password", fieldLabel: "Senha"),
-    ]
+    return ValidationBuilder.field("email").label("Email").required().email().build() +
+        ValidationBuilder.field("password").label("Senha").required().build() // + foi usado para concatenar
 }
