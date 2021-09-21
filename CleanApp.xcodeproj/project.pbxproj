@@ -118,6 +118,7 @@
 		FABD0CCC26F95E7F00C2B46A /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CCB26F95E7F00C2B46A /* LoginPresenterTests.swift */; };
 		FABD0CCF26F95F6500C2B46A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CCE26F95F6500C2B46A /* LoginViewModel.swift */; };
 		FABD0CD126F95FE400C2B46A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CD026F95FE400C2B46A /* LoginPresenter.swift */; };
+		FABD0CD326F9629800C2B46A /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CD226F9629800C2B46A /* AuthenticationSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -447,6 +448,7 @@
 		FABD0CCB26F95E7F00C2B46A /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		FABD0CCE26F95F6500C2B46A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FABD0CD026F95FE400C2B46A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		FABD0CD226F9629800C2B46A /* AuthenticationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -739,6 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				FA1CE7BE26F35830006D8FC8 /* AddAccountSpy.swift */,
+				FABD0CD226F9629800C2B46A /* AuthenticationSpy.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1743,6 +1746,7 @@
 				FA1CE7AA26F26B1D006D8FC8 /* TestExtensions.swift in Sources */,
 				FA1CE88A26F7E0D8006D8FC8 /* ValidationSpy.swift in Sources */,
 				FA1CE7C426F35942006D8FC8 /* TestFactories.swift in Sources */,
+				FABD0CD326F9629800C2B46A /* AuthenticationSpy.swift in Sources */,
 				FA1CE79126F0E8FE006D8FC8 /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
