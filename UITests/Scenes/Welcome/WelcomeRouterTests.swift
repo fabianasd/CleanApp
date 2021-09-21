@@ -31,10 +31,28 @@ class WelcomeRouterTests: XCTestCase {
         XCTAssertEqual(nav.viewControllers.count, 1)
         XCTAssertTrue(nav.viewControllers[0] is LoginViewController)
     }
-    
+}
+
+extension WelcomeRouterTests {
+    func makeSut() -> (sut: WelcomeRouter, nav: NavigationController) {
+        let loginFactorySpy = LoginFactorySpy()
+        let signUpFactorySpy = SignUpFactorySpy()
+        let nav = NavigationController()
+        let sut = WelcomeRouter(nav: nav, loginFactory: loginFactorySpy.makeLogin, signUpFactory: signUpFactorySpy.makeSignUp)
+        return (sut, nav)
+    }
+}
+
+extension WelcomeRouterTests {
     class LoginFactorySpy {
         func makeLogin() -> LoginViewController {
             return LoginViewController.instantiate()
+        }
+    }
+
+    class SignUpFactorySpy {
+        func makeSignUp() -> SignUpViewController {
+            return SignUpViewController.instantiate()
         }
     }
 }
