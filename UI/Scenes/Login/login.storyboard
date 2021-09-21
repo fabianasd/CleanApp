@@ -85,10 +85,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="QWu-Ag-6EF" id="8SS-bP-BM0"/>
-                        <outlet property="loadingIndicator" destination="cQC-n2-YEy" id="swN-TX-2ea"/>
-                        <outlet property="passwordTextField" destination="4zd-6z-U7a" id="P2R-SJ-s7y"/>
-                        <outlet property="saveButton" destination="EMS-P8-LMZ" id="irL-kN-K4D"/>
+                        <outlet property="emailTextField" destination="QWu-Ag-6EF" id="j25-p0-ukL"/>
+                        <outlet property="loadingIndicator" destination="cQC-n2-YEy" id="qUx-N7-zlG"/>
+                        <outlet property="loginButton" destination="EMS-P8-LMZ" id="VNV-IE-B4y"/>
+                        <outlet property="passwordTextField" destination="4zd-6z-U7a" id="fvU-Re-u9S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

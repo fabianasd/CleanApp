@@ -125,6 +125,7 @@
 		FABD0CDC26F9788800C2B46A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CD026F95FE400C2B46A /* LoginPresenter.swift */; };
 		FABD0CE126F97DAE00C2B46A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CE026F97DAE00C2B46A /* LoginViewController.swift */; };
 		FABD0CE326F97E3F00C2B46A /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABD0CE226F97E3F00C2B46A /* login.storyboard */; };
+		FABD0CE626F97FB000C2B46A /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CE526F97FB000C2B46A /* LoginViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -460,6 +461,7 @@
 		FABD0CD826F974F800C2B46A /* LoginControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
 		FABD0CE026F97DAE00C2B46A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FABD0CE226F97E3F00C2B46A /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
+		FABD0CE526F97FB000C2B46A /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -816,6 +818,7 @@
 		FA1CE7EF26F3BC49006D8FC8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FABD0CE426F97F9B00C2B46A /* Login */,
 				FA1CE7ED26F3BA65006D8FC8 /* SignUp */,
 			);
 			path = Scenes;
@@ -1188,6 +1191,14 @@
 			children = (
 				FABD0CE026F97DAE00C2B46A /* LoginViewController.swift */,
 				FABD0CE226F97E3F00C2B46A /* login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FABD0CE426F97F9B00C2B46A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FABD0CE526F97FB000C2B46A /* LoginViewControllerTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1794,6 +1805,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABD0CE626F97FB000C2B46A /* LoginViewControllerTests.swift in Sources */,
 				FA1CE7D826F35DFD006D8FC8 /* SignUpViewControllerTests.swift in Sources */,
 				FA1CE7F226F3BDCF006D8FC8 /* TestExtension.swift in Sources */,
 			);
