@@ -99,6 +99,7 @@
 		FA2DC9D026EBC8B700FC39B4 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC9CF26EBC8B700FC39B4 /* DomainError.swift */; };
 		FA2DC9D226EC492300FC39B4 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC9D126EC492300FC39B4 /* HttpError.swift */; };
 		FAA11B0726F9E12400BC00D2 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE73626EEA322006D8FC8 /* TestExtensions.swift */; };
+		FAA11B0A26F9E37A00BC00D2 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA11B0926F9E37A00BC00D2 /* Welcome.storyboard */; };
 		FABD0CA326F8A57800C2B46A /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CA226F8A57800C2B46A /* EmailValidationTests.swift */; };
 		FABD0CA526F8C00700C2B46A /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CA426F8C00700C2B46A /* EmailValidation.swift */; };
 		FABD0CA726F8C12000C2B46A /* ValidationCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CA626F8C12000C2B46A /* ValidationCompositeTests.swift */; };
@@ -437,6 +438,7 @@
 		FA2DC9C726E843D800FC39B4 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 		FA2DC9CF26EBC8B700FC39B4 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		FA2DC9D126EC492300FC39B4 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		FAA11B0926F9E37A00BC00D2 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		FABD0CA226F8A57800C2B46A /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
 		FABD0CA426F8C00700C2B46A /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		FABD0CA626F8C12000C2B46A /* ValidationCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCompositeTests.swift; sourceTree = "<group>"; };
@@ -810,6 +812,7 @@
 		FA1CE7EE26F3BAD1006D8FC8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FAA11B0826F9E35100BC00D2 /* Welcome */,
 				FABD0CDF26F97D9C00C2B46A /* Login */,
 				FA1CE7EC26F3BA56006D8FC8 /* SignUp */,
 			);
@@ -1123,6 +1126,14 @@
 				FA2DC9CF26EBC8B700FC39B4 /* DomainError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		FAA11B0826F9E35100BC00D2 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				FAA11B0926F9E37A00BC00D2 /* Welcome.storyboard */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		FABD0CB126F911FA00C2B46A /* Http */ = {
@@ -1662,6 +1673,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABD0CE326F97E3F00C2B46A /* login.storyboard in Resources */,
+				FAA11B0A26F9E37A00BC00D2 /* Welcome.storyboard in Resources */,
 				FA1CE7EB26F379DA006D8FC8 /* SignUp.storyboard in Resources */,
 				FABD0CBA26F93DC400C2B46A /* Images.xcassets in Resources */,
 			);

@@ -8,6 +8,7 @@
 import XCTest
 import UI
 import Validation
+import Main
 
 class LoginControllerFactoryTests: XCTestCase {
     func test_background_request_should_complete_on_main_thread() {
