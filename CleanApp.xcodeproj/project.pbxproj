@@ -100,6 +100,8 @@
 		FA2DC9D226EC492300FC39B4 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2DC9D126EC492300FC39B4 /* HttpError.swift */; };
 		FAA11B0726F9E12400BC00D2 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CE73626EEA322006D8FC8 /* TestExtensions.swift */; };
 		FAA11B0A26F9E37A00BC00D2 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA11B0926F9E37A00BC00D2 /* Welcome.storyboard */; };
+		FAA11B0F26F9E81100BC00D2 /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA11B0E26F9E81100BC00D2 /* WelcomeViewControllerTests.swift */; };
+		FAA11B1126F9E92400BC00D2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA11B1026F9E92400BC00D2 /* WelcomeViewController.swift */; };
 		FABD0CA326F8A57800C2B46A /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CA226F8A57800C2B46A /* EmailValidationTests.swift */; };
 		FABD0CA526F8C00700C2B46A /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CA426F8C00700C2B46A /* EmailValidation.swift */; };
 		FABD0CA726F8C12000C2B46A /* ValidationCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CA626F8C12000C2B46A /* ValidationCompositeTests.swift */; };
@@ -439,6 +441,8 @@
 		FA2DC9CF26EBC8B700FC39B4 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		FA2DC9D126EC492300FC39B4 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		FAA11B0926F9E37A00BC00D2 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		FAA11B0E26F9E81100BC00D2 /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
+		FAA11B1026F9E92400BC00D2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FABD0CA226F8A57800C2B46A /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
 		FABD0CA426F8C00700C2B46A /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		FABD0CA626F8C12000C2B46A /* ValidationCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCompositeTests.swift; sourceTree = "<group>"; };
@@ -822,6 +826,7 @@
 		FA1CE7EF26F3BC49006D8FC8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FAA11B0D26F9E7FB00BC00D2 /* Welcome */,
 				FABD0CE426F97F9B00C2B46A /* Login */,
 				FA1CE7ED26F3BA65006D8FC8 /* SignUp */,
 			);
@@ -1132,6 +1137,15 @@
 			isa = PBXGroup;
 			children = (
 				FAA11B0926F9E37A00BC00D2 /* Welcome.storyboard */,
+				FAA11B1026F9E92400BC00D2 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		FAA11B0D26F9E7FB00BC00D2 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				FAA11B0E26F9E81100BC00D2 /* WelcomeViewControllerTests.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1803,6 +1817,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA11B1126F9E92400BC00D2 /* WelcomeViewController.swift in Sources */,
 				FABD0CC126F9476400C2B46A /* RoundendTextField.swift in Sources */,
 				FA1CE7F526F42AA7006D8FC8 /* UIViewControllerExtensions.swift in Sources */,
 				FA1CE7F926F42DB8006D8FC8 /* Storyboard.swift in Sources */,
@@ -1820,6 +1835,7 @@
 			files = (
 				FABD0CE626F97FB000C2B46A /* LoginViewControllerTests.swift in Sources */,
 				FA1CE7D826F35DFD006D8FC8 /* SignUpViewControllerTests.swift in Sources */,
+				FAA11B0F26F9E81100BC00D2 /* WelcomeViewControllerTests.swift in Sources */,
 				FA1CE7F226F3BDCF006D8FC8 /* TestExtension.swift in Sources */,
 				FAA11B0726F9E12400BC00D2 /* TestExtensions.swift in Sources */,
 			);
