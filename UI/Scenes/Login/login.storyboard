@@ -39,17 +39,17 @@
                                 <color key="textColor" red="0.33725490196078434" green="0.0" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWu-Ag-6EF" userLabel="EmailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWu-Ag-6EF" userLabel="EmailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
                                 <rect key="frame" x="32" y="310" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4zd-6z-U7a" userLabel="PasswordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4zd-6z-U7a" userLabel="PasswordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
                                 <rect key="frame" x="32" y="360" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMS-P8-LMZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMS-P8-LMZ">
                                 <rect key="frame" x="32" y="426" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.53333333329999999" green="0.054901960780000002" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -74,12 +74,16 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qPU-6Z-l4a" secondAttribute="trailing" id="2cm-Re-yZC"/>
                             <constraint firstItem="4zd-6z-U7a" firstAttribute="height" secondItem="QWu-Ag-6EF" secondAttribute="height" id="6dS-Dj-EPJ"/>
                             <constraint firstItem="4zd-6z-U7a" firstAttribute="top" secondItem="QWu-Ag-6EF" secondAttribute="bottom" constant="16" id="ApZ-ex-ika"/>
+                            <constraint firstItem="QWu-Ag-6EF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="Bd0-np-w8g"/>
                             <constraint firstItem="QWu-Ag-6EF" firstAttribute="top" secondItem="dfj-Ca-gkN" secondAttribute="bottom" constant="16" id="EGe-s4-Ue5"/>
                             <constraint firstItem="dfj-Ca-gkN" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="MQA-ce-rfB"/>
                             <constraint firstItem="cQC-n2-YEy" firstAttribute="top" secondItem="EMS-P8-LMZ" secondAttribute="bottom" constant="16" id="Oga-JY-3Fo"/>
                             <constraint firstItem="dfj-Ca-gkN" firstAttribute="top" secondItem="qPU-6Z-l4a" secondAttribute="bottom" constant="24" id="PKZ-wY-co4"/>
                             <constraint firstItem="4zd-6z-U7a" firstAttribute="leading" secondItem="QWu-Ag-6EF" secondAttribute="leading" id="Pbt-j1-DHL"/>
                             <constraint firstItem="qPU-6Z-l4a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ulr-iZ-KsC"/>
+                            <constraint firstItem="EMS-P8-LMZ" firstAttribute="trailing" secondItem="QWu-Ag-6EF" secondAttribute="trailing" id="ZFI-04-L4k"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QWu-Ag-6EF" secondAttribute="trailing" constant="32" id="cia-OM-236"/>
+                            <constraint firstItem="EMS-P8-LMZ" firstAttribute="leading" secondItem="QWu-Ag-6EF" secondAttribute="leading" id="lEd-cp-04J"/>
                             <constraint firstItem="4zd-6z-U7a" firstAttribute="trailing" secondItem="QWu-Ag-6EF" secondAttribute="trailing" id="sQI-lz-dfe"/>
                             <constraint firstItem="cQC-n2-YEy" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="yZ5-Cj-Agc"/>
                         </constraints>
