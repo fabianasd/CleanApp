@@ -16,18 +16,25 @@ class RemoteAuthenticationTests: XCTestCase {
         sut.auth(authenticationModel: makeAuthenticationModel()) { _ in }
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
-
+    
     func test_auth_should_call_httpClient_with_correct_data() {
         let (sut, httpClientSpy) = makeSut()
         let authenticationModel = makeAuthenticationModel()
         sut.auth(authenticationModel: authenticationModel) { _ in }
         XCTAssertEqual(httpClientSpy.data, authenticationModel.toData())
     }
-
+    
     func test_auth_should_complete_with_error_if_client_completes_with_error() {
         let (sut, httpClientSpy) = makeSut()
         expect(sut, completeWith: .failure(.unexpected), when: {
             httpClientSpy.completionWithError(.noConnectivity)
+        })
+    }
+    
+    func test_auth_should_complete_with_expired_session_error_if_client_completes_with_unauthorized() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.expiredSession), when: {
+            httpClientSpy.completionWithError(.unauthorized)
         })
     }
 }
@@ -40,7 +47,7 @@ extension RemoteAuthenticationTests {
         checkMemoryLeak(for: httpClientSpy, file: file, line: line)
         return (sut, httpClientSpy)
     }
-
+    
     func expect(_ sut: RemoteAuthentication, completeWith expectedResult: Authentication.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
         let exp = expectation(description: "waiting")
         sut.auth(authenticationModel: makeAuthenticationModel()) { receivedResult in

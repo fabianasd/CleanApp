@@ -29,7 +29,7 @@ public final class RemoteAuthentication: Authentication {
                 }
             case .failure(let error):
                 switch error {
-//                case .unauthorized: completion(.failure(.expiredSession))
+                case .unauthorized: completion(.failure(.expiredSession))
                 default: completion(.failure(.unexpected))
                 }
             }
