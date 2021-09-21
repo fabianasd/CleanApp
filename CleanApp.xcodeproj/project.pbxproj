@@ -123,6 +123,8 @@
 		FABD0CD926F974F800C2B46A /* LoginControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CD826F974F800C2B46A /* LoginControllerFactory.swift */; };
 		FABD0CDA26F9759200C2B46A /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CD226F9629800C2B46A /* AuthenticationSpy.swift */; };
 		FABD0CDC26F9788800C2B46A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CD026F95FE400C2B46A /* LoginPresenter.swift */; };
+		FABD0CE126F97DAE00C2B46A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD0CE026F97DAE00C2B46A /* LoginViewController.swift */; };
+		FABD0CE326F97E3F00C2B46A /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABD0CE226F97E3F00C2B46A /* login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -456,6 +458,8 @@
 		FABD0CD426F96DF600C2B46A /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
 		FABD0CD626F9747600C2B46A /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
 		FABD0CD826F974F800C2B46A /* LoginControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
+		FABD0CE026F97DAE00C2B46A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FABD0CE226F97E3F00C2B46A /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -803,6 +807,7 @@
 		FA1CE7EE26F3BAD1006D8FC8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FABD0CDF26F97D9C00C2B46A /* Login */,
 				FA1CE7EC26F3BA56006D8FC8 /* SignUp */,
 			);
 			path = Scenes;
@@ -1174,6 +1179,15 @@
 			children = (
 				FABD0CCE26F95F6500C2B46A /* LoginViewModel.swift */,
 				FABD0CD026F95FE400C2B46A /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FABD0CDF26F97D9C00C2B46A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FABD0CE026F97DAE00C2B46A /* LoginViewController.swift */,
+				FABD0CE226F97E3F00C2B46A /* login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1635,6 +1649,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABD0CE326F97E3F00C2B46A /* login.storyboard in Resources */,
 				FA1CE7EB26F379DA006D8FC8 /* SignUp.storyboard in Resources */,
 				FABD0CBA26F93DC400C2B46A /* Images.xcassets in Resources */,
 			);
@@ -1768,6 +1783,7 @@
 				FA1CE7F526F42AA7006D8FC8 /* UIViewControllerExtensions.swift in Sources */,
 				FA1CE7F926F42DB8006D8FC8 /* Storyboard.swift in Sources */,
 				FA1CE7E726F3792E006D8FC8 /* SignUpViewController.swift in Sources */,
+				FABD0CE126F97DAE00C2B46A /* LoginViewController.swift in Sources */,
 				FABD0CBE26F9456200C2B46A /* Color.swift in Sources */,
 				FABD0CC326F948A900C2B46A /* NavigationController.swift in Sources */,
 				FABD0CBC26F9446B00C2B46A /* UIColorExtensions.swift in Sources */,

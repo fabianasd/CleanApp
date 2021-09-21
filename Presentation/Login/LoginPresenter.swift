@@ -7,6 +7,7 @@
 
 import Foundation
 import Domain
+import Presentation
 
 public final class LoginPresenter {
     private let validation: Validation
